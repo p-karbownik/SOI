@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo test1
+./a.out 1 1 20 5
+echo test2
+./a.out 5 2 40 5 
+echo test3
+./a.out 2 5 40 5

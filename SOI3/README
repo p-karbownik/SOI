@@ -1,0 +1,32 @@
+Rozwiązanie problemu producent-konsument z wykorzystaniem semaforów
+Autor: Patryk Karbownik
+
+-----------------------------------------------------------
+Zadanie do zrealizowania
+
+Należy zrealizować typ "bufor komunikacyjny". W czasie implementacji należy
+zapewnić synchronizację:
+
+- nie dopuścić do czytania z pustego bufora,
+
+- nie dopuścić do zapisu do pełnego bufora,
+
+- zadbać o "nie przeszkadzanie sobie" procesów zapisujących do bufora i
+  procesów czytających z bufora.
+  
+Dodatkowe więzy mogą dotyczyć liczby elementów aktualnie przechowywanych w
+buforach, kolejności zapisu do i odczytu z poszczególnych buforów, liczby
+elementów zapisywanych/odczytywanych jednocześnie, operacji na wielu buforach
+jednocześnie, itd.
+
+-----------------------------------------------------------
+Plik test zawiera skrypt uruchamiajace 3 przypadki testowe:
+1. Konsumenci: 1, Producenci: 1, Ilosc produktow wytworzonych przez jednego producneta: 20, Rozmiar bufora: 5
+2. Konsumenci: 5, Producenci: 2, Ilosc produktow wytworzonych przez jednego producneta: 40, Rozmiar bufora: 5
+3. Konsumenci: 2, Producenci: 5, Ilosc produktow wytworzonych przez jednego producneta: 40, Rozmiar bufora: 5
+
+Skrypt uruchamia sie po wpisaniu poleceniem: ./test
+Wymaga on, aby skompilowany plik main.c miał standardową nazwę a.out. Informacje, kto i co robi pojawiaja sie na standardowym wyjsciu. Program traktuje produkty o wartosci 20 jako premium, a o wartosci 10 jako zwykle.
+
+Program mozna wywolac nastepujaco:
+./a.out LiczbaKonsumentow LiczbaProducentow IloscProduktowWyprodukowanaPrzezJednegoProducenta RozmiarBufora

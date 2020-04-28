@@ -1,0 +1,39 @@
+Konstrukcja systemu plików
+Autor: Patryk Karbownik
+
+Zadanie:
+W pliku na dysku należy zorganizować system plików z jednopoziomowym
+katalogiem.  Elementem katalogu jest opis pliku, zawierający co najmniej
+nazwę, wielkość i sposób rozmieszczenia pliku na wirtualnym dysku. Należy
+zaimplementować następujące operacje, dostępne dla użytkownika programu:
+
+- tworzenie wirtualnego dysku,
+	
+- kopiowanie pliku z dysku systemu na dysk wirtualny,
+	
+- kopiowanie pliku z dysku wirtualnego na dysk systemu,
+	
+- wyświetlanie katalogu dysku wirtualnego,
+		
+- usuwanie pliku z wirtualnego dysku,
+	
+- usuwanie wirtualnego dysku,
+
+- wyświetlenie zestawienia z aktualną mapą zajętości wirtualnego dysku -
+  czyli listy kolejnych obszarów wirtualnego dysku z opisem: adres, typ
+  obszaru, rozmiar, stan (np. dla bloków danych: wolny/zajęty).
+  
+Uruchamianie
+
+
+./vsfs.out parametr1 parametr2
+
+Lista paramterów wraz z opisem funkcjonalności:
+
+1 -> tworzy dysk wirtualny o nazwie Disk.vsfs
+2 parametr2 -> kopiuje plik o nazwie parametr2 na dysk wirtualny
+3 parametr2 -> usuwa plik o nazwie parametr2 z dysku wirtualnego
+4 parametr2 -> kopiuje plik o nazwie parametr2 z dysuk wirutalnego na dysk lokalny
+5 -> wyświetla mapę zajętości wirtualnego dysku
+6 -> wyświetlanie katalogu dysku wirtualnego
+7 -> usuwanie wirtualnego dysku

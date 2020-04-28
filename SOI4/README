@@ -1,0 +1,33 @@
+Autor: Patryk Karbownik
+
+Streszczenie treści zadania:
+
+Realizacja komunikacji i synchronizacji między producentami oraz konsumentami. Konsumenci i producenci mają być zrealizowani jako wątki. 3 bufory FIFO do wstawiania i wyjmowania wiadomości. Wymagana dodatkowa funkcja do wstawiania specjalnych komunikatów (mają być one powielone na wszystkie bufory oraz posiadać pierwszeństwo przy wyjmowaniu). Przygotować i zaimplementować scenariusz przykładowy dla nie mniej niż po siedmiu działających producentów i konsumentów operujących na zaimplementowanych trzech buforach o opisanych własnościach.
+
+Scenariusz:
+
+10 producentów
+8 konsumentów
+Rozmiar bufora: 4
+3 bufory: A, B, C
+
+Konsument wyjmuje z każdego bufora dokładnie 7 wiadomości. Tą liczbę mogą zmodyfikować wiadomości specjalne.
+Wiadomości specjalne zwiekszają o 1 liczbę zwykłych wiadomości, jakie mają być wyjęte przez każdego producenta z określonego bufora (zakodowane jest to w wiadomości)
+Maksymalnie 4 wiadomości specjalne.
+Treść wiadomości specjalnych generowana jest losowo.
+Producent wstawia do losowo wybranego bufora wiadomość, a konsument wyciąga wiadomość z losowo wybranego bufora.
+Na standardowe wyjście podawane są informacje o tym, co dzieje się w programie.
+
+Treść wiadomości
+XY -> X (nr bufora, gdzie zwiekszamy tak jak wczesniej podano 1 -> bufor A; 2 -> bufor B, 3 -> bufor C)
+   -> Y (nr kontrolny wiadomosci)
+
+Przykładowy wynik programu:
+Ilosc produktow na konsumenta (A/B/C): 9/8/8
+Ilosc wyslanych wiadomosci specjalnych: 4
+
+Komentarz do wyniku:
+Początkowa ilość produktów na konsumenta wynosi: 7/7/7. Suma różnic na odpowiednich pozycjach wynosi 2 + 1 + 1 = 4, a wiec tyle, ile zwiększają nam tę ilość 4 nadane wiadomości specjalne.
+
+Uruchamianie 
+W danej lokalizacji należy uruchomić Makefile standardowym poleceniem make. Program po skompilowaniu uruchomi sie automatycznie. Aby uniknąć ponownych kompilacji można program uruchomić wpisując: ./a.out w termialu w danej lokalizacji.
